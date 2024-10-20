@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Project Name
+
+GemaChain
+
+## Description
+
+Supply chain Gemas
+
 ## Getting Started
 
 First, run the development server:
@@ -34,3 +42,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Project Name
+
+### Description
+
+A brief description of the project.
+
+### Features
+
+- Feature 1
+- Feature 2
+
+### Installation
+
+Instructions on how to install the project.
+
+### Usage
+
+Provide examples of how to use the project.
