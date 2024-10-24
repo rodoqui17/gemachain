@@ -49,19 +49,23 @@ const LandingPage = () => {
   return user ? (
     <UserPanel user={user} onLogout={handleLogout} />
   ) : (
-    <div className="h-screen bg-gray-100 flex justify-center items-center">
-      <div className="bg-white p-10 rounded-lg shadow-lg w-3/4 max-w-lg flex flex-col items-center">
-        <img src="https://media.istockphoto.com/id/489814272/photo/gold-silver-rings-and-chains.jpg?b=1&s=612x612&w=0&k=20&c=0DKm2s37yb8_6LfE9S4AC7qEu1BW_iN-_Q5P90Bn0uU=" alt="Welcome" className="mb-4 w-32 h-32 object-cover rounded-full" />
-        <h1>GemaChain</h1>
-        <h5 className="text-3xl font-bold text-gray-900 mb-4">Trazabilidad de Joyas</h5>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          onClick={handleLogin}
-        >
-          Iniciar sesión con Google
-        </button>
-      </div>
+    <div className="min-h-screen bg-gray-100 flex justify-center items-center">
+    <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-md md:max-w-lg lg:max-w-2xl flex flex-col items-center">
+      <img
+        src="https://media.istockphoto.com/id/489814272/photo/gold-silver-rings-and-chains.jpg?b=1&s=612x612&w=0&k=20&c=0DKm2s37yb8_6LfE9S4AC7qEu1BW_iN-_Q5P90Bn0uU="
+        alt="Welcome"
+        className="mb-6 w-40 h-40 object-cover rounded-full shadow-md"
+      />
+      <h1 className="text-4xl font-extrabold text-gray-900 mb-6">MINERUM</h1>
+      <button
+        className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+        onClick={handleLogin}
+      >
+        Iniciar sesión
+      </button>
     </div>
+  </div>
+  
   );
 };
 
