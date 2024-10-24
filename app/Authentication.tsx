@@ -49,22 +49,96 @@ const LandingPage = () => {
   return user ? (
     <UserPanel user={user} onLogout={handleLogout} />
   ) : (
-    <div className="min-h-screen bg-gray-100 flex justify-center items-center">
-    <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-md md:max-w-lg lg:max-w-2xl flex flex-col items-center">
-      <img
-        src="https://media.istockphoto.com/id/489814272/photo/gold-silver-rings-and-chains.jpg?b=1&s=612x612&w=0&k=20&c=0DKm2s37yb8_6LfE9S4AC7qEu1BW_iN-_Q5P90Bn0uU="
-        alt="Welcome"
-        className="mb-6 w-40 h-40 object-cover rounded-full shadow-md"
-      />
-      <h1 className="text-4xl font-extrabold text-gray-900 mb-6">MINERUM</h1>
-      <button
+    <div className="min-h-screen bg-gray-100">
+    {/* Header */}
+    <header className="bg-blue-900 text-white py-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-3xl font-bold">Minerum</h1>
+        <nav>
+          <ul className="flex space-x-6">
+            <li><a href="#features" className="hover:text-gray-300">Features</a></li>
+            <li><a href="#about" className="hover:text-gray-300">About</a></li>
+            <li><a href="#contact" className="hover:text-gray-300">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+    {/* Hero Section */}
+    <section className="bg-cover bg-center h-screen flex items-center justify-center text-center" style={{ backgroundImage: 'url("https://example.com/mining-background.jpg")' }}>
+      <div className="bg-black bg-opacity-50 p-10 rounded-lg">
+        <h1 className="text-5xl font-bold text-white mb-4">Transparency and Traceability in Mining</h1>
+        <p className="text-xl text-gray-200 mb-6">Track every step of the minerals from the mine to their final destination.</p>
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">Get Started</button>
+      </div>
+    </section>
+  
+    {/* Features Section */}
+    <section id="features" className="py-20 bg-white">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-10">Key Features</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold mb-4">Real-Time Traceability</h3>
+            <p>Track the mineral journey from the source to the final buyer in real-time.</p>
+          </div>
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold mb-4">Secure Blockchain Data</h3>
+            <p>We ensure security and transparency through blockchain technology.</p>
+          </div>
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold mb-4">Origin Certification</h3>
+            <p>Get digital certificates to guarantee the legitimate origin of minerals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    {/* About Section */}
+    <section id="about" className="py-20 bg-gray-200">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-10">About Minerum</h2>
+        <p className="text-xl text-gray-700">MinerTrace is the leading mining traceability platform, offering companies, regulators, and consumers the transparency they need to ensure minerals meet all regulatory and ethical standards. Our blockchain-based solution guarantees data security and integrity.</p>
+      </div>
+    </section>
+  
+    {/* CTA Section */}
+    <section className="py-20 bg-blue-900 text-white">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-10">Ready to enhance transparency?</h2>
+        <button
         className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300"
         onClick={handleLogin}
       >
-        Iniciar sesión
+        Log in
       </button>
-    </div>
+      </div>
+    </section>
+  
+    {/* Contact Section */}
+    <section id="contact" className="py-20 bg-gray-100">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-10">Contact</h2>
+        <p className="text-lg text-gray-700 mb-6">Do you have questions or need more information? Contact us.</p>
+        <form className="max-w-lg mx-auto">
+          <input className="w-full p-3 mb-4 border border-gray-300 rounded-lg" type="email" placeholder="Your email" />
+          <textarea className="w-full p-3 mb-4 border border-gray-300 rounded-lg" placeholder="Your message"></textarea>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">Send</button>
+        </form>
+      </div>
+    </section>
+  
+    {/* Footer */}
+    <footer className="bg-blue-900 text-white py-4">
+      <div className="container mx-auto text-center">
+        <p>&copy; 2024 Minerum. All rights reserved.</p>
+      </div>
+    </footer>
   </div>
+
+  
+  
+    
   
   );
 };
